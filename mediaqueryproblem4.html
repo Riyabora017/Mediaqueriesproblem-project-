@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IW Problem Example</title>
+    <style>
+        /* Default styles: large screen */
+        * {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        #box {
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 100px repeat(2, 200px);
+            gap: 10px;
+            grid-template-areas: 
+                "nav nav "
+                "Leftbox Rightbox";
+        }
+
+        #box > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        #box > div:nth-child(1) {
+            background-color: yellow;
+            grid-area: nav;
+        }
+
+        #box > div:nth-child(2) {
+            background-color: red;
+            grid-area: Leftbox;
+        }
+
+        #box > div:nth-child(3) {
+            background-color: lime;
+            grid-area: Rightbox;
+        }
+
+       
+        /* Medium screen: tablets */
+        @media (min-width: 750px) and (max-width: 900px) {
+            #box {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 100px repeat(, 200px);
+                grid-template-areas: 
+                    "nav nav"
+                    "Leftbox Rightbox";
+            }
+        }
+
+        /* Small screen: mobiles */
+        @media (max-width: 749px) {
+            #box {
+                grid-template-columns: 2fr;
+                grid-template-rows: 100px repeat(2, 200px);
+                grid-template-areas: 
+                    "nav"
+                    "Leftbox"
+                    "Rightbox"
+                    ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>Navbar</div>
+        <div>Left box</div>
+        <div>Right box</div>
+       
+    </div>
+</body>
+</html>

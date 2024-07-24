@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IW Problem Example</title>
+
+    <style>
+        /* defualt styles:  large screen*/
+        *{
+            margin: 0;
+            font-size: 30px;
+        }
+        #box {
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 200px;
+            gap: 10px;
+            grid-template-areas: 
+            "nav nav nav nav"
+            "box1 box2 box3 box4";
+        }
+
+        #box>div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #box>div:nth-child(1) {
+            background-color: red;
+            grid-area: nav;
+        }
+
+        #box>div:nth-child(2) {
+            background-color: yellow;
+            grid-area: box1;
+        }
+
+        #box>div:nth-child(3) {
+            background-color: grey;
+            grid-area: box2;
+        }
+
+        #box>div:nth-child(4) {
+            background-color: lime;
+            grid-area: box3;
+        }
+
+        #box>div:nth-child(5) {
+            background-color: blue;
+            grid-area: box4;
+        }
+
+        /* medium screen: tablets */
+        @media all and (min-width: 750px) and (max-width:900px){
+            #box{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 100px repeat(2, 200px);
+                grid-template-areas: 
+                "nav nav"
+                 "box1 box2"
+                 "box3 box4";
+            }
+        }
+
+         /* small screen: mobiles */
+         @media all and (max-width:749px){
+            #box{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: 100px repeat(4, 200px);
+                grid-template-areas: 
+                "nav"
+                 "box1"
+                 "box2"
+                 "box3"
+                 "box4";
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="box">
+        <div>Navbar</div>
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+    </div>
+
+</body>
+
+</html>
