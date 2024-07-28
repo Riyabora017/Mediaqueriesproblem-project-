@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            text-align: center;
+            padding: 20px;
+        }
+        #container h1 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        #container p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .room-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .room-card {
+            width: 180px;
+            height: 280px; /* Increased height for better layout */
+            border: 1px solid #ccc;
+            margin: 10px;
+            background-color: #fff;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .room-card img {
+            width: 100%;
+            height: 60%; /* Adjusted height for image */
+            object-fit: cover;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .room-card h2 {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .room-card p {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .room-card button {
+            border: none;
+            background-color: skyblue;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .room-card button:hover {
+            background-color: #4CAF50;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 800px) {
+            .room-card {
+                width: 45%; /* 2 cards per row */
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .room-card {
+                width: 100%; /* 1 card per row */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Rooms & Suites</h1>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+    </div>
+
+    <div class="room-cards">
+        <div class="room-card">
+            <img src="https://preview.colorlib.com/theme/sogo/images/slider-3.jpg" alt="Single Room">
+            <h2>Single Room</h2>
+            <p>$90/Per Night</p>
+            <button>Book Now</button>
+        </div>
+
+        <div class="room-card">
+            <img src="https://preview.colorlib.com/theme/sogo/images/slider-4.jpg" alt="Family Room">
+            <h2>Family Room</h2>
+            <p>$120/Per Night</p>
+            <button>Book Now</button>
+        </div>
+
+        <div class="room-card">
+            <img src="https://preview.colorlib.com/theme/sogo/images/slider-2.jpg" alt="Presidential Room">
+            <h2>Presidential Room</h2>
+            <p>$250/Per Night</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+</body>
+</html>
+
